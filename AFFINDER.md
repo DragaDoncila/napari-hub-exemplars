@@ -1,50 +1,62 @@
 # Description
 
-This should be a detailed description of the background and context of your plugin,
-how it's meant to be used, and perhaps some brief examples.
+This GUI plugin allows you to quickly find the affine matrix mapping
+one image to another using manual correspondence points annotation.
 
-If you have videos or screenshots of your plugin in action, you should include them
-here as well, to make them front and center for new users. Wherever possible, you
-should use absolute links to these assets, so that we can easily display them 
-on the hub.
+More simply, this plugin allows you to select corresponding points
+on an image, and a second image you wish to transform. It computes 
+the requisite transformation matrix using Affine Transform, Euclidean Transform, 
+or Similarity Transform, and performs this transformation on the
+moving image, aligning it to the reference image.
 
 # Who is This For?
 
-This section should describe the target audience for this plugin (what knowledge,
-skills and experience are assumed), as well as a description of the types of data
-supported by this plugin.
+This is a simple plugin which can be used on any 2D images, provided
+they can be loaded as layers into napari. The images need not be the same
+file format and this plugin also works with labels layers.
 
-Try to make the data description as explicit as possible, so that users know the
-format your plugin expects. This applies both to reader plugins reading file formats
-and to function/dock widget plugins accepting layers and/or layer data.
-
-If you know of researchers, groups or labs using your plugin, or if it has been cited
-anywhere, feel free to also include this information here.
+No prior understanding of the transformation methods is required, as
+they perform in the background based on the reference points selected.
 
 # How to Guide
 
-This section should go through step-by-step examples of how your plugin should be used.
-Where your plugin provides multiple dock widgets or functions, you should split these
-out into separate subsections for easy browsing. Include screenshots and videos
-wherever possible to elucidate your descriptions. 
+You will need a combination of two or more 2D image and/or labels layers 
+loaded into napari. Once you have installed affinder, you can find it in
+the dock widgets menu.
 
-Ideally, this section should start with minimal examples for those who just want a
-quick overview of the plugin's functionality, but this is also a good place to put
-more complex and in-depth tutorials highlighting any intricacies of your plugin.
+![Affinder widget in the Plugins->Add Dock Widget menu](find-affinder.png)
 
-# Preparing for Installation (optional)
+The first two dropdown boxes will be populated with the layers currently
+loaded into napari. Select a layer to use as reference, and another to
+transform.
 
-Most plugins can be installed out-of-the-box by just specifying the package requirements
-over in `setup.cfg`. However, if your plugin has any more complex dependencies, or 
-requires any additional preparation before installation, you should add this information
-here.
+![Dropdowns allow you to select the reference and moving layers](select-layers.png)
+
+Next, you can select the transformation model to use (affine is selected by default
+and is the least rigid transformation of those available). See [below](#models) for a
+description of the different models.
+
+Finally, you can optionally select a path to a text file for saving out the
+resulting transformation matrix.
+
+When you click Start, affinder will add two points layers to napari. 
+The plugin will also bring your reference image in focus, and its associated points
+layer. You can then start adding reference points by clicking on your image.
+
+![Adding reference points to layer](add-points.png)
+
+Once three points are added, affinder will switch focus to the moving image,
+and you should then proceed to select the corresponding three points.
+
+
+<a name="models"></a>
+## Transformation Models
+
 
 # Getting Help
 
-This section should point users to your preferred support tools, whether this be raising
-an issue on GitHub, asking a question on image.sc, or using some other method of contact.
-If you distinguish between usage support and bug/feature support, you should state that
-here.
+If you find a bug with affinder, or would like support with using it, please raise an
+issue on the GitHub repository `https://github.com/jni/affinder`.
 
 # How to Cite
 
