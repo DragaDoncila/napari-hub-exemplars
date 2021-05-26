@@ -3,7 +3,7 @@
 This plugin provides a reader for zarr backed OME-NGFF images in napari. The reader
 will inspect the `.zattrs` metadata provided and pass any relevant metadata, including channel, scale and colormap metadata. 
 
-<video>
+<video width="320" height="240">
   <source src="ome-zarr-example.mp4" type="video/mp4">
   Video of opening ome-zarr with napari
 </video>
