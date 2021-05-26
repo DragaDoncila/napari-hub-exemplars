@@ -30,7 +30,7 @@ The first two dropdown boxes will be populated with the layers currently
 loaded into napari. Select a layer to use as reference, and another to
 transform.
 
-![Dropdowns allow you to select the reference and moving layers](select-layers.png)
+![Dropdowns allow you to select the reference and moving layers](select-layers.svg)
 
 Next, you can select the transformation model to use (affine is selected by default
 and is the least rigid transformation of those available). See [below](#models) for a
@@ -43,17 +43,17 @@ When you click Start, affinder will add two points layers to napari.
 The plugin will also bring your reference image in focus, and its associated points
 layer. You can then start adding reference points by clicking on your image.
 
-![Adding reference points to layer](add-points.png)
+![Adding reference points to layer](add-points.svg)
 
 Once three points are added, affinder will switch focus to the moving image,
 and you should then proceed to select the corresponding three points.
 
-![Adding corresponding points to newly focused layer](corresponding-points.png)
+![Adding corresponding points to newly focused layer](corresponding-points.svg)
 
 affinder will immediately transform the moving image to align the points you've
 selected when you add your third corresponding point to your moving image.
 
-![The moving image is transformed once three points are added](initial-transform.png)
+![The moving image is transformed once three points are added](initial-transform.svg)
 
 From there, you can continue iteratively adding sets of three points until you 
 are happy with the alignment. Click Finish to exit affinder.
