@@ -48,10 +48,39 @@ layer. You can then start adding reference points by clicking on your image.
 Once three points are added, affinder will switch focus to the moving image,
 and you should then proceed to select the corresponding three points.
 
+![Adding corresponding points to newly focused layer](corresponding-points.png)
+
+affinder will immediately transform the moving image to align the points you've
+selected when you add your third corresponding point to your moving image.
+
+![The moving image is transformed once three points are added](initial-transform.png)
+
+From there, you can continue iteratively adding sets of three points until you 
+are happy with the alignment. Click Finish to exit affinder.
 
 <a name="models"></a>
 ## Transformation Models
 
+There are three transformation models available for use with affinder.
+They are listed here in order of increasing rigidity in the types of
+transforms they will allow. The eponymous Affine Transform is the 
+least rigid and is the default choice.
+
+- [**Affine Transform**](https://en.wikipedia.org/wiki/Affine_transformation): 
+the least rigid transformation, it preserves
+lines and parallelism, but not necessarily distance and angles. Translation,
+scaling, similarity, reflection, rotation and shearing are all valid
+affine transformations.
+
+- [**Similarity Transform**](https://en.wikipedia.org/wiki/Similarity_(geometry)): 
+this is a "shape preserving" transformation, producing objects which are 
+geometrically similar. Translation, rotation, reflection and scaling are 
+valid similarity transforms. Shearing is not.
+
+- [**Euclidean Transform**](https://en.wikipedia.org/wiki/Rigid_transformation):
+Also known as a rigid transformation, this transform preserves the Euclidean
+distance between each pair of points on the image. This includes rotation,
+translation and reflection but not scaling or shearing.
 
 # Getting Help
 
