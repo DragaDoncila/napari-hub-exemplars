@@ -9,6 +9,8 @@ the requisite transformation matrix using Affine Transform, Euclidean Transform,
 or Similarity Transform, and performs this transformation on the
 moving image, aligning it to the reference image.
 
+![Affinder aligning two images of a parasitic worm](https://i.imgur.com/FIhnqa0.gif)
+
 # Who is This For?
 
 This is a simple plugin which can be used on any 2D images, provided
@@ -24,13 +26,13 @@ You will need a combination of two or more 2D image and/or labels layers
 loaded into napari. Once you have installed affinder, you can find it in
 the dock widgets menu.
 
-![Affinder widget in the Plugins->Add Dock Widget menu](find-affinder.png)
+![Affinder widget in the Plugins->Add Dock Widget menu](https://i.imgur.com/w7MCXQy.png)
 
 The first two dropdown boxes will be populated with the layers currently
 loaded into napari. Select a layer to use as reference, and another to
 transform.
 
-![Dropdowns allow you to select the reference and moving layers](select-layers.png)
+![Dropdowns allow you to select the reference and moving layers](https://i.imgur.com/Tdbm1sX.png)
 
 Next, you can select the transformation model to use (affine is selected by default
 and is the least rigid transformation of those available). See [below](#models) for a
@@ -43,17 +45,17 @@ When you click Start, affinder will add two points layers to napari.
 The plugin will also bring your reference image in focus, and its associated points
 layer. You can then start adding reference points by clicking on your image.
 
-![Adding reference points to layer](add-points.png)
+![Adding reference points to layer](https://i.imgur.com/WPzNtyy.png)
 
 Once three points are added, affinder will switch focus to the moving image,
 and you should then proceed to select the corresponding three points.
 
-![Adding corresponding points to newly focused layer](corresponding-points.png)
+![Adding corresponding points to newly focused layer](https://i.imgur.com/JVZCvmp.png)
 
 affinder will immediately transform the moving image to align the points you've
 selected when you add your third corresponding point to your moving image.
 
-![The moving image is transformed once three points are added](initial-transform.png)
+![The moving image is transformed once three points are added](https://i.imgur.com/NTne9fj.png)
 
 From there, you can continue iteratively adding sets of three points until you 
 are happy with the alignment. Click Finish to exit affinder.
