@@ -9,7 +9,10 @@ the requisite transformation matrix using Affine Transform, Euclidean Transform,
 or Similarity Transform, and performs this transformation on the
 moving image, aligning it to the reference image.
 
-![Affinder aligning two images of a parasitic worm](https://i.imgur.com/FIhnqa0.gif)
+
+https://user-images.githubusercontent.com/17995243/119912058-fff5c680-bf9d-11eb-918c-2cf5572ffb96.mp4
+
+
 
 # Who is This For?
 
