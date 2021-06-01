@@ -9,9 +9,10 @@ the requisite transformation matrix using Affine Transform, Euclidean Transform,
 or Similarity Transform, and performs this transformation on the
 moving image, aligning it to the reference image.
 
-![Affinder aligning two images of a parasitic worm](https://i.imgur.com/FIhnqa0.gif)
+https://user-images.githubusercontent.com/17995243/120086403-f1d0b300-c121-11eb-8000-a44a2ac54339.mp4
 
-# Who is This For?
+
+# Supported Data
 
 This is a simple plugin which can be used on any 2D images, provided
 they can be loaded as layers into napari. The images need not be the same
@@ -57,8 +58,11 @@ selected when you add your third corresponding point to your moving image.
 
 ![The moving image is transformed once three points are added](https://i.imgur.com/NTne9fj.png)
 
-From there, you can continue iteratively adding sets of three points until you 
-are happy with the alignment. Click Finish to exit affinder.
+From there, you can continue iteratively adding points until you 
+are happy with the alignment. Affinder will switch focus between
+reference and moving image with each point.
+
+Click Finish to exit affinder.
 
 <a name="models"></a>
 ## Transformation Models
@@ -76,7 +80,7 @@ affine transformations.
 
 - [**Similarity Transform**](https://en.wikipedia.org/wiki/Similarity_(geometry)): 
 this is a "shape preserving" transformation, producing objects which are 
-geometrically similar. Translation, rotation, reflection and scaling are 
+geometrically similar. Translation, rotation, reflection and uniform scaling are 
 valid similarity transforms. Shearing is not.
 
 - [**Euclidean Transform**](https://en.wikipedia.org/wiki/Rigid_transformation):
@@ -87,7 +91,7 @@ translation and reflection but not scaling or shearing.
 # Getting Help
 
 If you find a bug with affinder, or would like support with using it, please raise an
-issue on the GitHub repository `https://github.com/jni/affinder`.
+issue on the [GitHub repository](https://github.com/jni/affinder).
 
 # How to Cite
 
